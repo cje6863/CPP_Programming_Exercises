@@ -6,7 +6,7 @@
 #include <string.h>
 #include <time.h>
 
-#define DIM 3
+#define DIM 5
 #define NUM_MVP 10
 
 enum Direction { Left = 75, Right = 77, Up = 72, Down = 80 };
@@ -45,7 +45,7 @@ static void display()
 	printf("----------------\n\t");
 	clock_t t1 = clock();
 	double d = (double)(t1 - tStart) / CLOCKS_PER_SEC;
-	printf("\n\tÀÌµ¿ È½¼ö : %6d\n\t¼Ò¿ä ½Ã°£ : %6.1f\n\n", nMove, d);
+	printf("\n\tï¿½Ìµï¿½ È½ï¿½ï¿½ : %6d\n\tï¿½Ò¿ï¿½ ï¿½Ã°ï¿½ : %6.1f\n\n", nMove, d);
 }
 
 static bool move(int dir)
@@ -139,13 +139,13 @@ int playPuzzle()
 	init();
 	display();
 	printRanking();
-	printf("\n ÆÛÁñÀ» ¼¯¾îÁÖ¼¼¿ä...(¿£ÅÍ)");
+	printf("\n ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½...(ï¿½ï¿½ï¿½ï¿½)");
 	_getche();
 	shuffle(100);
 
 	backupInitMap();
 
-	printf("\n °ÔÀÓÀÌ ½ÃÀÛµË´Ï´Ù...");
+	printf("\n ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÛµË´Ï´ï¿½...");
 	_getche();
 
 	nMove = 0;
@@ -165,7 +165,7 @@ int playPuzzle()
 	init();
 	backupInitMap(false);
 	display();
-	printf("\n Å°¸¦ ´­·¯ÁÖ¼¼¿ä...");
+	printf("\n Å°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½...");
 	_getche();
 
 	for (int i = 0; i < nHist; i++)
