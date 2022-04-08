@@ -47,7 +47,7 @@ static void display()
     printf("----------------\n\t");
     clock_t t1 = clock();
     double d = (double)(t1 - tStart) / CLOCKS_PER_SEC;
-    printf("\n\t ÀÌµ¿ È½¼ö :%6d\n\t ¼Ò¿ä½Ã°£ :%6.1f\n\n", nMove, d);
+    printf("\n\t ì´ë™ íšŸìˆ˜ :%6d\n\t ì†Œìš”ì‹œê°„ :%6.1f\n\n", nMove, d);
 }
 
 static bool move(int dir)
@@ -115,11 +115,11 @@ int playFifteenPuzzle()
     init();
     display();
     printRanking();
-    printf("\n ÆÛÁñÀ» ¼¯¾îÁÖ¼¼¿ä(enter)..");
+    printf("\n í¼ì¦ì„ ì„ì–´ì£¼ì„¸ìš”(enter)..");
     _getche();
     shuffle(100);
 
-    printf("\n °ÔÀÓÀÌ ½ÃÀÛµË´Ï´Ù...");
+    printf("\n ê²Œì„ì´ ì‹œì‘ë©ë‹ˆë‹¤...");
     _getche();
 
     nMove = 0;

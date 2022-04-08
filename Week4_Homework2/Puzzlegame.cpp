@@ -6,7 +6,7 @@
 #include <string.h>
 #include <time.h>
 
-#define DIM 5
+#define DIM 3
 #define NUM_MVP 10
 
 enum Direction { Left = 75, Right = 77, Up = 72, Down = 80 };
@@ -45,7 +45,7 @@ static void display()
 	printf("----------------\n\t");
 	clock_t t1 = clock();
 	double d = (double)(t1 - tStart) / CLOCKS_PER_SEC;
-	printf("\n\t�̵� Ƚ�� : %6d\n\t�ҿ� �ð� : %6.1f\n\n", nMove, d);
+	printf("\n\t이동 횟수 : %6d\n\t소요 시간 : %6.1f\n\n", nMove, d);
 }
 
 static bool move(int dir)
@@ -139,13 +139,13 @@ int playPuzzle()
 	init();
 	display();
 	printRanking();
-	printf("\n ������ �����ּ���...(����)");
+	printf("\n 퍼즐을 섞어주세요...(엔터)");
 	_getche();
 	shuffle(100);
 
 	backupInitMap();
 
-	printf("\n ������ ���۵˴ϴ�...");
+	printf("\n 게임이 시작됩니다...");
 	_getche();
 
 	nMove = 0;
@@ -165,7 +165,7 @@ int playPuzzle()
 	init();
 	backupInitMap(false);
 	display();
-	printf("\n Ű�� �����ּ���...");
+	printf("\n 키를 눌러주세요...");
 	_getche();
 
 	for (int i = 0; i < nHist; i++)
