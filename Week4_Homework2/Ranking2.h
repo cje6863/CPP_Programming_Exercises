@@ -1,3 +1,5 @@
+//1823274 ÃÖÁöÀ±
+
 #include <cstdio>
 #include <stdio.h>
 

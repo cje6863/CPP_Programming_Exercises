@@ -1,3 +1,5 @@
+//1823274 최지윤
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

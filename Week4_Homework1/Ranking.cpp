@@ -1,3 +1,5 @@
+//1823274 ÃÖÁöÀ±
+
 #pragma warning(disable:4996)
 #include "Ranking.h"
 #include <Windows.h>

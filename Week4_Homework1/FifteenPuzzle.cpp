@@ -1,3 +1,5 @@
+//1823274 ÃÖÁöÀ±
+
 #include "Ranking.h"
 #include <Windows.h>
 #include <stdlib.h>
@@ -47,7 +49,7 @@ static void display()
     printf("----------------\n\t");
     clock_t t1 = clock();
     double d = (double)(t1 - tStart) / CLOCKS_PER_SEC;
-    printf("\n\t ì´ë™ íšŸìˆ˜ :%6d\n\t ì†Œìš”ì‹œê°„ :%6.1f\n\n", nMove, d);
+    printf("\n\t ?´?™ ?šŸ?ˆ˜ :%6d\n\t ?†Œ?š”?‹œê°? :%6.1f\n\n", nMove, d);
 }
 
 static bool move(int dir)
@@ -115,11 +117,11 @@ int playFifteenPuzzle()
     init();
     display();
     printRanking();
-    printf("\n í¼ì¦ì„ ì„ì–´ì£¼ì„¸ìš”(enter)..");
+    printf("\n ?¼ì¦ì„ ?„?–´ì£¼ì„¸?š”(enter)..");
     _getche();
     shuffle(100);
 
-    printf("\n ê²Œì„ì´ ì‹œì‘ë©ë‹ˆë‹¤...");
+    printf("\n ê²Œì„?´ ?‹œ?‘?©?‹ˆ?‹¤...");
     _getche();
 
     nMove = 0;

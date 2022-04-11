@@ -1,3 +1,5 @@
+//1823274 ÃÖÁöÀ±
+
 #include <cstdio>
 
 typedef struct PlayInfo

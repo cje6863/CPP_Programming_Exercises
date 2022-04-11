@@ -1,3 +1,5 @@
+//1823274 ÃÖÁöÀ±
+
 #pragma warning(disable:4996)
 #include <Windows.h>
 #include <stdio.h>
@@ -9,7 +11,7 @@ static int nMVP = NUM_MVP;
 
 static void initRanking()
 {
-	PlayInfo noname = { "C++ì¢‹ì•„ìš”", 1000, 1000.0 };
+	PlayInfo noname = { "C++ì¢‹ì•„?š”", 1000, 1000.0 };
 	for (int i = 0; i < nMVP; i++) MVP[i] = noname;
 }
 
@@ -35,7 +37,7 @@ void storeRanking(const char* fname)
 void printRanking()
 {
 	for (int i = 0; i < nMVP; i++)
-		printf(" [%2d ìœ„]  %4d  %-16s  %5.1f\n",
+		printf(" [%2d ?œ„]  %4d  %-16s  %5.1f\n",
 			i + 1, MVP[i].nMove, MVP[i].name, MVP[i].tEapsed);
 }
 
@@ -51,7 +53,7 @@ int addRanking(int nMove, double tElap)
 		}
 		MVP[pos].nMove = nMove;
 		MVP[pos].tEapsed = tElap;
-		printf(" %dìœ„ ìž…ë‹ˆë‹¤. ì´ë¦„ì„ ìž…ë ¥í•˜ì„¸ìš” : ", pos + 1);
+		printf(" %d?œ„ ?ž…?‹ˆ?‹¤. ?´ë¦„ì„ ?ž…? ¥?•˜?„¸?š” : ", pos + 1);
 		scanf("%s", MVP[pos].name);
 		return pos + 1;
 	}

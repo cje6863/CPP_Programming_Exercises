@@ -1,3 +1,5 @@
+////1823274 ÃÖÁöÀ±
+
 #include "Ranking2.h"
 #include <stdio.h>
 #include <Windows.h>
@@ -45,7 +47,7 @@ static void display()
 	printf("----------------\n\t");
 	clock_t t1 = clock();
 	double d = (double)(t1 - tStart) / CLOCKS_PER_SEC;
-	printf("\n\tì´ë™ íšŸìˆ˜ : %6d\n\tì†Œìš” ì‹œê°„ : %6.1f\n\n", nMove, d);
+	printf("\n\t?´?™ ?šŸ?ˆ˜ : %6d\n\t?†Œ?š” ?‹œê°? : %6.1f\n\n", nMove, d);
 }
 
 static bool move(int dir)
@@ -139,13 +141,13 @@ int playPuzzle()
 	init();
 	display();
 	printRanking();
-	printf("\n í¼ì¦ì„ ì„ì–´ì£¼ì„¸ìš”...(ì—”í„°)");
+	printf("\n ?¼ì¦ì„ ?„?–´ì£¼ì„¸?š”...(?—”?„°)");
 	_getche();
 	shuffle(100);
 
 	backupInitMap();
 
-	printf("\n ê²Œì„ì´ ì‹œì‘ë©ë‹ˆë‹¤...");
+	printf("\n ê²Œì„?´ ?‹œ?‘?©?‹ˆ?‹¤...");
 	_getche();
 
 	nMove = 0;
@@ -165,7 +167,7 @@ int playPuzzle()
 	init();
 	backupInitMap(false);
 	display();
-	printf("\n í‚¤ë¥¼ ëˆŒëŸ¬ì£¼ì„¸ìš”...");
+	printf("\n ?‚¤ë¥? ?ˆŒ?Ÿ¬ì£¼ì„¸?š”...");
 	_getche();
 
 	for (int i = 0; i < nHist; i++)
