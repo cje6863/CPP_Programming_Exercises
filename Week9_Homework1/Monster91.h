@@ -1,13 +1,12 @@
 #pragma once
-#include "Canvas82.h"
-#define INIT_ENERGY 100
-#define ITEM_ENERGY 8
+#include "Canvas91.h"
+#define DIM 40
 
 class Monster
 {
+public:
 	string name, icon;
 	int x, y, nItem;
-	int nEnergy;
 
 	void clip(int maxx, int maxy) {
 		if (x < 0) x = 0;
@@ -20,22 +19,13 @@ class Monster
 		{
 			map[y][x] = 0;
 			nItem++;
-			nEnergy += ITEM_ENERGY;
 		}
-		else if (nEnergy > 0) nEnergy--;
 	}
 public:
-	static int nMonster;
-
 	Monster(string n = "³ª±«¹°", string i = "¡Ø", int px = 0, int py = 0)
-		: name(n), icon(i), x(px), y(py), nItem(0), nEnergy(INIT_ENERGY) {
-		nMonster++;
-	}
-	~Monster() { 
-		cout << "\t" << name << icon << "¹°·¯°©´Ï´Ù~~~\n";
-		nMonster--;
-	}
-	int getEnergy() { return nEnergy; }
+		: name(n), icon(i), x(px), y(py), nItem(0) { }
+	~Monster() { cout << "\t" << name << icon << "¹°·¯°©´Ï´Ù~~~\n"; }
+
 	void draw(Canvas& canvas) { canvas.draw(x, y, icon); }
 	void move(int** map, int maxx, int maxy) {
 		switch (rand() % 8)
@@ -52,7 +42,5 @@ public:
 		clip(maxx, maxy);
 		eat(map);
 	}
-	void print() {
-	cout << "\t" << name << icon << ":" << nItem << " E: " << nEnergy << endl;
-	}
+	void print() { cout << "\t" << name << icon << ":" << nItem << endl; }
 };
