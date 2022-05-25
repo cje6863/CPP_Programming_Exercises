@@ -1,7 +1,7 @@
 #pragma once
-#include "Canvas92.h"
-#include "VariousMonsters92.h"
-#include "Matrix92.h"
+#include "Canvas102.h"
+#include "Monster102.h"
+#include "Matrix102.h"
 #include <Windows.h>
 #define MAXMONS 8
 
@@ -52,14 +52,8 @@ public:
 		getchar();
 		for (int i = 0; i < maxwalk; i++)
 		{
-			((Zombie*)pMon[0])->move(world.Data(), xMax, yMax);
-			((Vampire*)pMon[1])->move(world.Data(), xMax, yMax);
-			((KGhost*)pMon[2])->move(world.Data(), xMax, yMax);
-			((Jiangshi*)pMon[3])->move(world.Data(), xMax, yMax);
-			((Jiangshi*)pMon[4])->move(world.Data(), xMax, yMax);
-			((Smombi*)pMon[5])->move(world.Data(), xMax, yMax);
-			((Siangshi*)pMon[6])->move(world.Data(), xMax, yMax);
-			((Minion*)pMon[7])->move(world.Data(), xMax, yMax);
+			for (int k = 0; k < nMon; k++)
+				pMon[k]->move(world.Data(), xMax, yMax);
 			nMove++;
 			print();
 			if (isDone()) break;

@@ -1,5 +1,5 @@
 #pragma once
-#include "Canvas92.h"
+#include "Canvas101.h"
 #define DIM 40
 
 class Monster
@@ -24,10 +24,10 @@ public:
 public:
 	Monster(string n = "³ª±«¹°", string i = "¡Ø", int px = 0, int py = 0)
 		: name(n), icon(i), x(px), y(py), nItem(0) { }
-	~Monster() { cout << "\t" << name << icon << "¹°·¯°©´Ï´Ù~~~\n"; }
+	virtual ~Monster() { cout << "\t" << name << icon << "¹°·¯°©´Ï´Ù~~~\n"; }
 
 	void draw(Canvas& canvas) { canvas.draw(x, y, icon); }
-	void move(int** map, int maxx, int maxy) {
+	virtual void move(int** map, int maxx, int maxy) {
 		switch (rand() % 8)
 		{
 		case 0: y--; break;

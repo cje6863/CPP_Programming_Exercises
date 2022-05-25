@@ -1,5 +1,6 @@
-#include "MonsterWorld92.h"
-#include "VariousMonsters92.h"
+#include "MonsterWorld102.h"
+#include "VariousMonsters102.h"
+#include "Human102.h"
 #include <time.h>
 
 void main()
@@ -12,10 +13,8 @@ void main()
 	game.add(new Vampire("¹ìÆÄÀÌ¾îÂ¯", "¡Ú", rand() % w, rand() % h));
 	game.add(new KGhost("¾îÂ¼´Ù±Í½Å", "¢¾", rand() % w, rand() % h));
 	game.add(new Jiangshi("¸ø¸Ô¾îµµ°í", "¡ê", rand() % w, rand() % h, true));
-	game.add(new Jiangshi("¸ø¸Ô¾î¼¼·Î", "¢Õ", rand() % w, rand() % h, false));
-	game.add(new Smombi("½º¸öºñ¸öºñ", "¢É", rand() % w, rand() % h));
-	game.add(new Siangshi("´Ù¸Ô¾îµµ°í", "¢Â", rand() % w, rand() % h, false));
-	game.add(new Minion("¹Ì´Ï¾ðÂ¯Â¯", "¢Ý", rand() % w, rand() % h));
+	game.add(new Jiangshi("¸ø¸Ô¾îµµ°í", "¢Õ", rand() % w, rand() % h, false));
+	game.add(new Human("¹Ì·¡ÀÇÀÎ·ù", "¡Ï", rand() % w, rand() % h));
 	game.play(500, 10);
 	printf("------°ÔÀÓ Á¾·á------------\n");
 }
