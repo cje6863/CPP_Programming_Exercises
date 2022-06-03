@@ -1,6 +1,6 @@
-#include "MonsterWorld103.h"
-#include "VariousMonsters103.h"
-#include "Human103.h"
+#include "MonsterWorld111.h"
+#include "VariousMonsters111.h"
+#include "Human111.h"
 #include <time.h>
 
 void main()
@@ -13,9 +13,8 @@ void main()
 	game.add(new Vampire("뱀파이어짱", "★", rand() % w, rand() % h));
 	game.add(new KGhost("어쩌다귀신", "♥", rand() % w, rand() % h));
 	game.add(new Jiangshi("못먹어도고", "↔", rand() % w, rand() % h, true));
-	game.add(new Jiangshi("못먹어도고", "↕", rand() % w, rand() % h, false));
-	game.add(new Tuman("미래의좌파", "좌", rand() % w, rand() % h));
-	game.add(new Tuman("미래의우파", "우", rand() % w, rand() % h));
+	game.add(new Jiangshi("못먹어세로", "↕", rand() % w, rand() % h, false));
+	game.add(new Human("미래의인류", "♀", rand() % w, rand() % h));
 	game.play(500, 10);
 	printf("------게임 종료------------\n");
 }

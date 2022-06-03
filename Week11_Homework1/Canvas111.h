@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include "Point111.h"
 #define MAXLINES 100
 using namespace std;
 
@@ -17,6 +18,7 @@ public:
 		if (x >= 0 && y >= 0 && x < xMax && y < yMax)
 			line[y].replace(x * 2, 2, val);
 	}
+	void draw(Point& p, string val) { draw(p.x, p.y, val); }
 	void clear(string val = "  ") {
 		for (int y = 0; y < yMax; y++)
 			for (int x = 0; x < xMax; x++)
